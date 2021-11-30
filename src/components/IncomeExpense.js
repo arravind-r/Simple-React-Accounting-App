@@ -2,14 +2,14 @@ import React from "react";
 
 export const IncomeExpense = () => {
   return (
-    <div>
-      <div>
-        <h4>Income</h4>
-        <p>₹ 0.00</p>
+    <div className="income-expense-wrap">
+      <div className="income">
+        <p>Income</p>
+        <h4>₹ 0.00</h4>
       </div>
-      <div>
-        <h4>Expenses</h4>
-        <p>₹ 0.00</p>
+      <div className="expense">
+        <p>Expenses</p>
+        <h4>₹ 0.00</h4>
       </div>
     </div>
   );

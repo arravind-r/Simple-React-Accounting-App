@@ -5,7 +5,7 @@ import { SingleTransaction } from "./SingleTransaction";
 export const TransactionsHistory = () => {
   return (
     <div>
-      <h4>History</h4>
+      <h3>Transaction History</h3>
       <ul>
         <SingleTransaction />
       </ul>

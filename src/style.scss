@@ -27,15 +27,19 @@ body {
 
     li {
       list-style: none;
+      margin-top: -10px;
 
       a {
         text-transform: uppercase;
         text-decoration: none;
         color: #ffffff;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
         font-weight: 700;
         background-color: #1646e6;
         border-radius: 4px;
-        padding: 9px 36px 12px;
+        padding: 11px 36px 12px;
+        margin-top: -5px !important;
 
         &:hover {
           background-color: #0d33b3;
@@ -47,7 +51,198 @@ body {
 
 /* Main Container */
 .main-container {
-  margin: 80px 180px;
+  margin: 40px 0px;
+  display: flex;
+  justify-content: space-around;
+
+  .left-section,
+  .right-section {
+    width: 35%;
+    padding: 30px 60px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 6px rgba(92, 92, 92, 0.055);
+  }
+
+  .left-section {
+    height: 63vh;
+
+    .add-transaction-wrap {
+      h2 {
+        margin-bottom: 30px;
+        font-weight: 400;
+      }
+
+      .transaction-name,
+      .transaction-amount,
+      .transaction-date {
+        display: flex;
+        flex-direction: column;
+
+        label {
+          margin-bottom: 16px;
+          font-weight: 400;
+          color: #696969;
+        }
+
+        span{
+          margin-top: -10px;
+          margin-bottom: 16px;
+          font-size: 0.75rem;
+          color: #a1a1a1;
+        }
+
+        input {
+          margin-bottom: 28px;
+          padding: 10px 8px 11px;
+          border: 2px solid #d6d6d6 !important;
+          border-radius: 4px;
+          font-size: 1rem;
+          color: #141414;
+          outline: none;
+
+          &:focus-visible {
+            border: 2px solid #a1a1a1 !important;
+          }
+        }
+      }
+
+      button {
+        background-color: #1646e6;
+        color: #ffffff;
+        font-size: 1rem;
+        font-family: "Lato", sans-serif;
+        text-transform: uppercase;
+        padding: 13px 0 15px;
+        border-radius: 4px;
+        border: none;
+        width: 100%;
+        margin: 10px 0 30px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: #0d33b3;
+        }
+      }
+    }
+  }
+
+  .right-section {
+
+    h3{
+      font-weight: 400;
+    }
+
+    h1 {
+      font-size: 3.4rem;
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .income-expense-container {
+      margin: 40px 0 60px;
+      .income-expense-wrap {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        box-shadow: 0 0 12px 6px rgba(141, 141, 141, 0.123);
+
+        &>div{
+          flex: 1;
+          text-align: center;
+          margin: 10px 0;
+        }
+
+        .income {
+          border-right: 1px solid #e4e4e4;
+
+          p {
+            color: #696969;
+          }
+          h4 {
+            font-size: 1.35rem;
+            color: #1bc015;
+            margin: 10px 0 16px;
+          }
+        }
+
+        .expense {
+          p {
+            color: #696969;
+          }
+          h4 {
+            font-size: 1.35rem;
+            color: #cc201a;
+            margin: 10px 0 16px;
+          }
+        }
+      }
+    }
+
+    .transaction-history-container {
+      margin-top: 30px;
+
+      ul {
+        padding-left: 0;
+        margin-top: 20px;
+
+        .left-border-plus {
+          border-left: 4px solid #1bc015;
+        }
+
+        .left-border-minus {
+          border-left: 4px solid #cc201a;
+        }
+
+        li {
+          list-style: none;
+          display: flex;
+          justify-content: space-between;
+          padding: 14px 16px;
+          margin: 20px 0;
+          border-radius: 0 6px 6px 0;
+          box-shadow: 0 0 12px 8px rgba(141, 141, 141, 0.1);
+          position: relative;
+
+          .date,
+          .amount,
+          .label {
+            font-size: 0.85rem;
+          }
+
+          .date{
+            color: #696969;
+          }
+
+          .amount{
+            font-weight: 700;
+          }
+
+          button{
+            position: absolute;
+            right: -20px;
+            top: 9.5px;
+            background-color: #cc201a;
+            border: none;
+            color: #ffffff;
+            padding: 5px 7px;
+            cursor: pointer;
+            display: none;
+
+            &:hover{
+              background-color: #9c0e09;
+            }
+          }
+
+          &:hover{
+            button{
+              display: block;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 /* Footer */

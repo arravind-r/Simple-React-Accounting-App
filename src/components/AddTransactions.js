@@ -14,7 +14,10 @@ export const AddTransactions = () => {
           />
         </div>
         <div className="transaction-amount">
-          <label htmlFor="transactionAmount">Amount</label>
+          <label htmlFor="transactionAmount">Amount
+            
+          </label>
+          <span>(negative - expense, positive - income)</span>
           <input
             type="number"
             name="transactionAmount"

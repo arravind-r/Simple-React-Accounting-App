@@ -12,16 +12,14 @@ export const MainContainer = () => {
         <AddTransactions />
       </div>
       <div className="right-section">
-        <div className="right-wrap">
-          <div className="balance-container">
-            <Balance />
-          </div>
-          <div className="income-expense-container">
-            <IncomeExpense />
-          </div>
-          <div className="transaction-history-container">
-            <TransactionsHistory />
-          </div>
+        <div className="balance-container">
+          <Balance />
+        </div>
+        <div className="income-expense-container">
+          <IncomeExpense />
+        </div>
+        <div className="transaction-history-container">
+          <TransactionsHistory />
         </div>
       </div>
     </div>
