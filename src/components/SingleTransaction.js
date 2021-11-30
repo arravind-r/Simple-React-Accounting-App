@@ -1,70 +1,29 @@
-import React from "react";
+import React, { useContext } from "react";
 
-export const SingleTransaction = () => {
+import { GlobalContext } from "../context/GlobalState";
+
+export const SingleTransaction = ({ transaction }) => {
+  const { deleteTransaction } = useContext(GlobalContext);
+
+  const sign = transaction.transactionAmount < 0 ? "-" : "+";
+
   return (
     <div>
-      <li className="left-border-minus">
-        <div className="date">30-11-2021</div>
-        <div className="label">Salary</div>
-        <div className="amount">₹ 300</div>
+      <li
+        className={
+          transaction.transactionAmount < 0
+            ? "left-border-minus"
+            : "left-border-plus"
+        }
+      >
+        <div className="date">{transaction.transactionDate}</div>
+        <div className="label">{transaction.transactionName}</div>
+        <div className="amount">
+          {sign} ₹{Math.abs(transaction.transactionAmount)}
+        </div>
         <button
           className="delete-btn"
-          // onClick={() => deleteTransaction(transaction.id)}
-        >
-          x
-        </button>
-      </li>
-
-      <li className="left-border-plus">
-        <div className="date">30-11-2021</div>
-        <div className="label">Salary</div>
-        <div className="amount">₹ 300</div>
-        <button
-          className="delete-btn"
-        >
-          x
-        </button>
-      </li>
-
-      <li className="left-border-plus">
-        <div className="date">30-11-2021</div>
-        <div className="label">Salary</div>
-        <div className="amount">₹ 300</div>
-        <button
-          className="delete-btn"
-        >
-          x
-        </button>
-      </li>
-
-      <li className="left-border-minus">
-        <div className="date">30-11-2021</div>
-        <div className="label">Salary</div>
-        <div className="amount">₹ 300</div>
-        <button
-          className="delete-btn"
-        >
-          x
-        </button>
-      </li>
-
-      <li className="left-border-plus">
-        <div className="date">30-11-2021</div>
-        <div className="label">Salary</div>
-        <div className="amount">₹ 300</div>
-        <button
-          className="delete-btn"
-        >
-          x
-        </button>
-      </li>
-
-      <li className="left-border-minus">
-        <div className="date">30-11-2021</div>
-        <div className="label">Salary</div>
-        <div className="amount">₹ 300</div>
-        <button
-          className="delete-btn"
+          onClick={() => deleteTransaction(transaction.id)}
         >
           x
         </button>
