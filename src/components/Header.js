@@ -5,14 +5,14 @@ import imgLogo from "./../img/logo.png";
 export const Header = () => {
   return (
     <div className="header-wrap">
-      <a href="#">
+      <a>
         <img src={imgLogo} alt="accounting" />
       </a>
 
       <div className="menu">
         <ul>
           <li>
-            <a href="#">Login</a>
+            <a>Login</a>
           </li>
           {/* <li>Register</li> */}
         </ul>

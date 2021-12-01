@@ -27,7 +27,7 @@ body {
 
     li {
       list-style: none;
-      margin-top: -10px;
+      margin-top: -7px;
 
       a {
         text-transform: uppercase;
@@ -39,7 +39,6 @@ body {
         background-color: #1646e6;
         border-radius: 4px;
         padding: 11px 36px 12px;
-        margin-top: -5px !important;
 
         &:hover {
           background-color: #0d33b3;
@@ -58,6 +57,7 @@ body {
   .left-section,
   .right-section {
     width: 35%;
+    height: 100%;
     padding: 30px 60px;
     background-color: #ffffff;
     border-radius: 6px;
@@ -65,8 +65,6 @@ body {
   }
 
   .left-section {
-    height: 63vh;
-
     .add-transaction-wrap {
       h2 {
         margin-bottom: 30px;
@@ -85,7 +83,7 @@ body {
           color: #696969;
         }
 
-        span{
+        span {
           margin-top: -10px;
           margin-bottom: 16px;
           font-size: 0.75rem;
@@ -128,8 +126,7 @@ body {
   }
 
   .right-section {
-
-    h3{
+    h3 {
       font-weight: 400;
     }
 
@@ -147,7 +144,7 @@ body {
         align-items: center;
         box-shadow: 0 0 12px 6px rgba(141, 141, 141, 0.123);
 
-        &>div{
+        & > div {
           flex: 1;
           text-align: center;
           margin: 10px 0;
@@ -210,15 +207,15 @@ body {
             font-size: 0.85rem;
           }
 
-          .date{
+          .date {
             color: #696969;
           }
 
-          .amount{
+          .amount {
             font-weight: 700;
           }
 
-          button{
+          button {
             position: absolute;
             right: -20px;
             top: 9.5px;
@@ -229,13 +226,13 @@ body {
             cursor: pointer;
             display: none;
 
-            &:hover{
+            &:hover {
               background-color: #9c0e09;
             }
           }
 
-          &:hover{
-            button{
+          &:hover {
+            button {
               display: block;
             }
           }
@@ -254,5 +251,77 @@ body {
     color: #202020;
     text-align: center;
     font-size: 16px;
+  }
+}
+
+/* Media Queries For Responsiveness */
+
+/* For Mobile Devices */
+@media only screen and (min-width: 300px) and (max-width: 900px) {
+  /* Header */
+  .header-wrap {
+    padding: 16px 20px;
+
+    img {
+      width: 35px;
+    }
+
+    ul {
+      li {
+        margin-top: -6px;
+
+        a {
+          font-size: 0.7rem;
+          padding: 8px 26px 9px;
+        }
+      }
+    }
+  }
+
+  /* Main Container */
+  .main-container {
+    margin: 20px;
+    flex-direction: column;
+    align-items: center;
+
+    .left-section,
+    .right-section {
+      width: 85%;
+      padding: 20px 30px;
+    }
+
+    .left-section {
+      height: 100%;
+    }
+
+    .right-section {
+      margin: 20px 0;
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      .income-expense-container {
+        margin: 28px 0 0 0;
+        .income-expense-wrap {
+          & > div {
+            margin: 0;
+          }
+        }
+      }
+
+      .transaction-history-container {
+        margin-top: 38px;
+      }
+    }
+  }
+
+  /* Footer */
+  .footer-wrap {
+    padding: 5px 0;
+
+    p {
+      font-size: 14px;
+    }
   }
 }

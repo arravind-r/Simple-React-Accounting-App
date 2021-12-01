@@ -57,6 +57,7 @@ export const AddTransactions = () => {
             type="date"
             name="transactionDate"
             placeholder="Transaction Date"
+            data-date-format="DD MM YYYY"
             value={transactionDate}
             onChange={(e) => setTransactionDate(e.target.value)}
           />
