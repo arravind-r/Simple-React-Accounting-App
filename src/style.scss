@@ -136,6 +136,14 @@ body {
       margin: 0;
     }
 
+    .amtBlack {
+      color: #000000;
+    }
+
+    .amtRed {
+      color: #cc201a;
+    }
+
     .income-expense-container {
       margin: 40px 0 60px;
       .income-expense-wrap {
@@ -205,14 +213,17 @@ body {
           .amount,
           .label {
             font-size: 0.85rem;
+            width: 33.33%;
           }
 
           .date {
             color: #696969;
+            margin-right: 30px;
           }
 
           .amount {
             font-weight: 700;
+            text-align: right;
           }
 
           button {

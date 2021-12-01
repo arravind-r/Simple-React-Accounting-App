@@ -4,10 +4,10 @@ import AppReducer from "./AppReducer";
 // Initial State of the global app
 const initialState = {
   transactions: [
-    // { id: 1, transactionName: "Flower", transactionAmount: -20 },
-    // { id: 2, transactionName: "Salary", transactionAmount: 300 },
-    // { id: 3, transactionName: "Book", transactionAmount: -10 },
-    // { id: 4, transactionName: "Camera", transactionAmount: 150 },
+    // { id: 1, transactionName: "Flower", transactionAmount: -20, transactionDate: "2021-12-02" },
+    // { id: 2, transactionName: "Salary", transactionAmount: 300, transactionDate: "2021-11-22" },
+    // { id: 3, transactionName: "Book", transactionAmount: -10, transactionDate: "2021-12-05" },
+    // { id: 4, transactionName: "Camera", transactionAmount: 150, transactionDate: "2021-12-12" },
   ],
 };
 

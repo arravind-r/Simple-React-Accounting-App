@@ -24,6 +24,7 @@ export const AddTransactions = () => {
 
     setTransactionName("");
     setTransactionAmount("0");
+    setTransactionDate("mm-dd-yyyy");
   };
 
   return (
@@ -56,8 +57,6 @@ export const AddTransactions = () => {
           <input
             type="date"
             name="transactionDate"
-            placeholder="Transaction Date"
-            data-date-format="DD MM YYYY"
             value={transactionDate}
             onChange={(e) => setTransactionDate(e.target.value)}
           />
